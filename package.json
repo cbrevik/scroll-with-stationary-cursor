@@ -25,6 +25,22 @@
     ],
     "main": "./extension",
     "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "ScrollWithStationaryCursor Configuration",
+            "properties": {
+                "scrollWithCursor.moveLinesUp": {
+                    "type": "number",
+                    "default": 1,
+                    "description": "How many lines to move up."
+                },
+                "scrollWithCursor.moveLinesDown": {
+                    "type": "number",
+                    "default": 1,
+                    "description": "How many lines to move down."
+                }
+            }
+        },
         "commands": [
             {
                 "command": "extension.scrollWithCursorUp",
